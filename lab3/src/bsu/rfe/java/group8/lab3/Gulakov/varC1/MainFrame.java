@@ -44,7 +44,7 @@ public class MainFrame extends JFrame{
 	
 	private JFileChooser fileChooser = null; 
 	
-	// Ёлементы меню
+	
 	private JMenuItem saveToTextMenuItem; 
 	private JMenuItem saveToGraphicsMenuItem; 
 	private JMenuItem searchValueMenuItem;

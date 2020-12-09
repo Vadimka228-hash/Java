@@ -7,7 +7,7 @@ public class Cheese extends Food
 
     public Cheese()      
     {
-        super("Ρϋπ");                      
+        super("Π΅Ρ‹Ρ€");                      
     }
 
     public Double calculateCalories()       
@@ -18,7 +18,7 @@ public class Cheese extends Food
 
     public void consume()       
     {
-        System.out.println(this + " ρϊεδεν");
+        System.out.println(this + " ΡΡΠµΠ΄ΠµΠ½");
     }
 
 }

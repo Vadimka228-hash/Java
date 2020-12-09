@@ -50,7 +50,7 @@ public class MainFrame extends JFrame{
 	private JMenuItem searchValueMenuItem;
 	private JMenuItem searchRangeMenuAction;
 	
-	// Поля ввода для считывания значений переменных 
+	 
 	private JTextField textFieldFrom; 
 	private JTextField textFieldTo; 
 	private JTextField textFieldStep;   

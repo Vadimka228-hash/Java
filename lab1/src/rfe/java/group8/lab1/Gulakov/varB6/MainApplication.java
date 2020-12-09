@@ -52,9 +52,9 @@ public class MainApplication
 							if (parts[0].equals("-Coffee")) {
 								flag5=true;}
 							else
-								System.out.println("Класс " + parts[0] + " не найден.");
+								System.out.println("РљР»Р°СЃСЃ" + parts[0] + " РЅРµ РЅР°Р№РґРµРЅ.");
 					}catch (NoSuchMethodException e){
-						System.out.println("Метод класса " + parts[0] + " не найден.");
+						System.out.println("РњРµС‚РѕРґ РєР»Р°СЃСЃР° " + parts[0] + " РЅРµ РЅР°Р№РґРµРЅ.");
 						}
              catch (InstantiationException | IllegalAccessException | InvocationTargetException ex) {
                 ex.printStackTrace(System.out);
@@ -62,7 +62,7 @@ public class MainApplication
 
         }
 
-        System.out.println("Завтрак: "); 
+        System.out.println("Р—Р°РІС‚СЂР°Рє: "); 
         for (Food item : breakfast) {
             if (item != null) {
                 item.consume();
@@ -80,7 +80,7 @@ public class MainApplication
 				}
 				});
 			
-			System.out.println("Отсортированный вариант:");
+			System.out.println("РћС‚СЃРѕСЂС‚РёСЂРѕРІР°РЅРЅС‹Р№ РІР°СЂРёР°РЅС‚:");
 			for (Food item: breakfast)
 				if (item!=null){
 					item.consume();
@@ -91,15 +91,15 @@ public class MainApplication
 	
 		if(flag3){
 			int apple =0;
-			Food Apple = new Apple("Большое");
-			Food Apple1 = new Apple("Среднее");
-			Food Apple2 = new Apple("Маленькое");
+			Food Apple = new Apple("Р‘РѕР»СЊС€РѕРµ");
+			Food Apple1 = new Apple("РЎСЂРµРґРЅРµРµ");
+			Food Apple2 = new Apple("РњР°Р»РµРЅСЊРєРѕРµ");
 			for (Food item: breakfast){ 
 				if (item!=null) {
 					if(item.equals(Apple) || item.equals(Apple1) || item.equals(Apple2))
 						apple++;  }
 				}
-			System.out.println("Яблок количеством: " + apple + " съедено.");
+			System.out.println("РЇР±Р»РѕРєРѕ СЂР°Р·РјРµСЂРѕРј: " + apple + " СЃСЉРµРґРµРЅРѕ.");
 			}
 		
 		if(flag4){
@@ -110,20 +110,20 @@ public class MainApplication
 					if(item.equals(Cheese))
 						cheese++;}
 				}
-			System.out.println("Сыра количеством: " + cheese + " съедено.");
+			System.out.println("РЎС‹СЂ: " + cheese + " СЃСЉРµРґРµРЅ.");
 			}
 		
 		if(flag5){
 			int Coffee = 0;
-			Food Coffee1 = new Coffee("Насыщённый");
-			Food Coffee2 = new Coffee("Восточный");
-			Food Coffee3 = new Coffee("Горький");
+			Food Coffee1 = new Coffee("Р“РѕСЂСЊРєРёР№");
+			Food Coffee2 = new Coffee("РќР°СЃС‹С‰РµРЅРЅС‹Р№");
+			Food Coffee3 = new Coffee("Р’РѕСЃС‚РѕС‡РЅС‹Р№");
 			for (Food item: breakfast){ 
 				if (item!=null) {
 					if(item.equals(Coffee1) || item.equals(Coffee2) || item.equals(Coffee3))
 						Coffee++;  }
 				}
-			System.out.println("Кофе количеством: " + Coffee + " выпито.");
+			System.out.println("РљРѕС„Рµ: " + Coffee + " РІС‹РїРёС‚.");
 			}
 		
 		
@@ -136,11 +136,11 @@ public class MainApplication
 				else
 					break;
 				}
-			System.out.println("Общая колорийность завтрака =  " + CaloriesCounter + " кал.");
+			System.out.println("РћР±С‰Р°СЏ РєРѕР»РѕСЂРёР№РЅРѕСЃС‚СЊ Р·Р°РІС‚СЂР°РєР° =  " + CaloriesCounter + " РєР°Р».");
 			}
 
             
       
-        System.out.println("Всего хорошего!");
+        System.out.println("Р’СЃРµРіРѕ С…РѕСЂРѕС€РµРіРѕ!");
     }
     }

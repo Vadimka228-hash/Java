@@ -16,7 +16,7 @@ public class GornerTableCellRenderer implements TableCellRenderer
 {
 	private JPanel panel = new JPanel(); 
 	private JLabel label = new JLabel(); 
-	// Ищем ячейки, строковое представление которых совпадает с needle  
+	
 	private String needle = null; 
 	private String needleX = null;
 	private String needleY = null; 
@@ -26,19 +26,17 @@ public class GornerTableCellRenderer implements TableCellRenderer
 
 	public GornerTableCellRenderer() 
 	{ 
-		// Показывать только 5 знаков после запятой 
+		
 		formatter.setMaximumFractionDigits(5); 
-		// Не использовать группировку
+		
 		formatter.setGroupingUsed(false);
-		// Установить в качестве разделителя дробной части точку, а не запятую 
-		// По умолчанию, в региональных настройках Россия/Беларусь дробная часть  
-		// отделяется запятой 
+		
 		DecimalFormatSymbols dottedDouble = formatter.getDecimalFormatSymbols(); 
 		dottedDouble.setDecimalSeparator('.'); 
 		formatter.setDecimalFormatSymbols(dottedDouble); 
-		// Разместить надпись внутри панели    
+		 
 		panel.add(label);
-		// Установить выравнивание надписи по левому краю панели 
+		 
 		panel.setLayout(new FlowLayout(FlowLayout.LEFT)); 
 		 
 	} 
@@ -46,26 +44,23 @@ public class GornerTableCellRenderer implements TableCellRenderer
 	
 	  public Component getTableCellRendererComponent(JTable table, Object 
 			  value, boolean isSelected, boolean hasFocus, int row, int col) { 
-		  // Преобразовать число в строку с помощью форматировщика 
+		   
 		  String formattedDouble = formatter.format(value);
 		  
-		  // Установить текст надписи равным строковому представлению числа 
+		  
 		  label.setText(formattedDouble); 
-		  //шахматы
+		 
 		  if ((col+row)%2 == 0){
 	        	panel.setBackground(Color.BLACK);
 	        	label.setForeground(Color.WHITE);
 		  }else {
-			  // Иначе - в обычный белый 
+			  
 			 panel.setBackground(Color.WHITE);
 			 label.setForeground(Color.BLACK);
 		  }
 		  
 		if (col >= 1 && needle!=null && needle.equals(formattedDouble)) {
-			  // Номер столбца = 1 (т.е. второй столбец) 
-			  // + иголка не null (т.е. мы что-то ищем) 
-			  // + значение иголки совпадает со значением ячейки таблицы -			  
-			  // окрасить задний фон панели в красный цвет 
+			   
 			  panel.setBackground(Color.green); 
 			  label.setForeground(Color.BLACK);
 			  } 

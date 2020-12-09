@@ -11,7 +11,7 @@ public class GornerTableModel extends AbstractTableModel{
 	private Double step;
 	private double result[] = new double[3];
 
-	//Конструктора для инициализации полей
+	
 	public GornerTableModel(Double from, Double to, Double step, Double[] coefficients)	{
 		this.coefficients = coefficients;
 		this.from = from;
@@ -32,15 +32,14 @@ public class GornerTableModel extends AbstractTableModel{
 	public int getColumnCount() {
 		return 4;
 	}
-	//Количество строк в таблице зависит от длины интервала табулирования 
-	//и размера шага, поэтому его необходимо вычислять
+	
 	@SuppressWarnings("deprecation")
 	public int getRowCount() {
 		return new Double(Math.ceil((to-from)/step)).intValue()+1;
 	}
 
 	public Object getValueAt(int row, int col) 	{
-		// Вычислить значение X как НАЧАЛО_ОТРЕЗКА + ШАГ*НОМЕР_СТРОКИ 
+		
 		double x = from + step*row;
 		switch (col){
 		case 0:
@@ -67,13 +66,12 @@ public class GornerTableModel extends AbstractTableModel{
 			}
 		}
 
-	  //Тип данных для обоих столбцов в нашем случае одинаков, им является 
-	 // число  с  плавающей  точкой  –  Double. 
+	  
 	  public Class<?> getColumnClass(int col) { 
 		  return Double.class; 
 	  } 
 	   
-	  //Cведения о названиях столбцов
+	  
 	  public String getColumnName(int col) {
 		  
 		  switch (col){

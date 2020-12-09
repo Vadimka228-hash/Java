@@ -115,7 +115,7 @@ public class MainApplication
 		
 		if(flag5){
 			int Coffee = 0;
-			Food Coffee1 = new Coffee("Насыщенный");
+			Food Coffee1 = new Coffee("Насыщённый");
 			Food Coffee2 = new Coffee("Восточный");
 			Food Coffee3 = new Coffee("Горький");
 			for (Food item: breakfast){ 
@@ -136,7 +136,7 @@ public class MainApplication
 				else
 					break;
 				}
-			System.out.println("Общая колорийность завтрака = " + CaloriesCounter + " кал.");
+			System.out.println("Общая колорийность завтрака =  " + CaloriesCounter + " кал.");
 			}
 
             

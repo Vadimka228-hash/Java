@@ -128,7 +128,7 @@ public class MainApplication
 		
 		
 		if(flag2){
-			double CaloriesCounter=0;
+			double CaloriesCounter = 0;
 			for (Food item: breakfast)
 			{
 				if (item!=null)

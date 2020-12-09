@@ -67,7 +67,7 @@ public class MainFrame extends JFrame{
 	@SuppressWarnings({ "serial", "deprecation" })
 	public MainFrame(Double[] coefficients) 
 	{
-		super("Табулирование многочлена на отрезке по схеме Горнера"); 
+		super("РўР°Р±СѓР»РёСЂРѕРІР°РЅРёРµ РјРЅРѕРіРѕС‡Р»РµРЅР° РЅР° РѕС‚СЂРµР·РєРµ РїРѕ СЃС…РµРјРµ Р“РѕСЂРЅРµСЂР°"); 
 		
 		
 		this.coefficients = coefficients; 
@@ -86,19 +86,19 @@ public class MainFrame extends JFrame{
 		  
 		setJMenuBar(menuBar); 
 		
-		JMenu fileMenu = new JMenu("Файл");
+		JMenu fileMenu = new JMenu("Р¤Р°Р№Р»");
 		
 		menuBar.add(fileMenu);  
 		 
-		JMenu tableMenu = new JMenu("Таблица");
+		JMenu tableMenu = new JMenu("РўР°Р±Р»РёС†Р°");
 		
 		menuBar.add(tableMenu); 
 		
-		JMenu infMenu = new JMenu("Справка"); 
+		JMenu infMenu = new JMenu("РЎРїСЂР°РІРєР°"); 
 		menuBar.add(infMenu);
 		
 		 
-		Action saveToTextAction = new AbstractAction("Сохранить в текстовый файл") 	{
+		Action saveToTextAction = new AbstractAction("РЎРѕС…СЂР°РЅРёС‚СЊ РІ С‚РµРєСЃС‚РѕРІС‹Р№ С„Р°Р№Р»") 	{
 			public void actionPerformed(ActionEvent event)
 			{ 
 				if (fileChooser == null) 
@@ -124,7 +124,7 @@ public class MainFrame extends JFrame{
 				
 				
 		
-		Action saveToGraphicsAction = new AbstractAction("Сохранить данные для построения графика")
+		Action saveToGraphicsAction = new AbstractAction("РЎРѕС…СЂР°РЅРёС‚СЊ РґР°РЅРЅС‹Рµ РґР»СЏ РїРѕСЃС‚СЂРѕРµРЅРёСЏ РіСЂР°С„РёРєР°")
 		{ 
 			public void actionPerformed(ActionEvent event)
 			{ 
@@ -149,14 +149,14 @@ public class MainFrame extends JFrame{
 			saveToGraphicsMenuItem.setEnabled(false);     
 			
 		
-		Action searchValueAction = new AbstractAction("Найти значение многочлена")
+		Action searchValueAction = new AbstractAction("РќР°Р№С‚Рё Р·РЅР°С‡РµРЅРёРµ РјРЅРѕРіРѕС‡Р»РµРЅР°")
 		{ 
 			public void actionPerformed(ActionEvent event) 
 			{ 
 				renderer.setNeedle1(null, null);
 				
 				String value = JOptionPane.showInputDialog(MainFrame.this,
-						"Введите значение для поиска", "Поиск значения", JOptionPane.QUESTION_MESSAGE);
+						"Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РґР»СЏ РїРѕРёСЃРєР°", "РџРѕРёСЃРє Р·РЅР°С‡РµРЅРёСЏ", JOptionPane.QUESTION_MESSAGE);
 				 		
 				renderer.setNeedle(value); 
 				getContentPane().repaint(); 
@@ -168,18 +168,18 @@ public class MainFrame extends JFrame{
 			searchValueMenuItem.setEnabled(false); 
 			
 	
-		Action searchRangeAction = new AbstractAction("Найти значение многочлена в диопазоне")
+		Action searchRangeAction = new AbstractAction("РќР°Р№С‚Рё Р·РЅР°С‡РµРЅРёРµ РјРЅРѕРіРѕС‡Р»РµРЅР° РІ РґРёРѕРїР°Р·РѕРЅРµ")
 		{ 
 			public void actionPerformed(ActionEvent event)
 			{ 
 				renderer.setNeedle(null);
 				
 				 
-				String value1 = JOptionPane.showInputDialog(MainFrame.this,"Введите значение начала отрезка",
-						"Поиск значения из диапазона", JOptionPane.QUESTION_MESSAGE);
+				String value1 = JOptionPane.showInputDialog(MainFrame.this,"Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РЅР°С‡Р°Р»Р° РѕС‚СЂРµР·РєР°",
+						"РџРѕРёСЃРє Р·РЅР°С‡РµРЅРёСЏ РёР· РґРёР°РїР°Р·РѕРЅР°", JOptionPane.QUESTION_MESSAGE);
 				
-				String value2 = JOptionPane.showInputDialog(MainFrame.this,"Введите значение конца отрезка",
-						"Поиск значения из диапазона", JOptionPane.QUESTION_MESSAGE);
+				String value2 = JOptionPane.showInputDialog(MainFrame.this,"Р’РІРµРґРёС‚Рµ Р·РЅР°С‡РµРЅРёРµ РєРѕРЅС†Р° РѕС‚СЂРµР·РєР°",
+						"РџРѕРёСЃРє Р·РЅР°С‡РµРЅРёСЏ РёР· РґРёР°РїР°Р·РѕРЅР°", JOptionPane.QUESTION_MESSAGE);
 				; 
 				renderer.setNeedle1(value1, value2); 
 				getContentPane().repaint(); 
@@ -192,25 +192,25 @@ public class MainFrame extends JFrame{
 			searchRangeMenuAction.setEnabled(false); 
 			
 		
-		Action information = new AbstractAction("О программе")
+		Action information = new AbstractAction("Рћ РїСЂРѕРіСЂР°РјРјРµ")
 		{ 
 			
 			public void actionPerformed(ActionEvent event) 
 			{ 
 				JOptionPane.showMessageDialog(MainFrame.this,
-						"Автор:\n Гулаков \n 8-я группа ");
+						"РђРІС‚РѕСЂ:\n Р“СѓР»Р°РєРѕРІ \n 8-СЏ РіСЂСѓРїРїР°");
 				} 
 			};
 			
 			infMenu.add(information);  
 			
-		JLabel labelForFrom = new JLabel("X изменяется на интервале от:"); 
+		JLabel labelForFrom = new JLabel("X РёР·РјРµРЅСЏРµС‚СЃСЏ РЅР° РёРЅС‚РµСЂРІР°Р»Рµ РѕС‚:"); 
 		textFieldFrom = new JTextField("0.0", 10); 
 		textFieldFrom.setMaximumSize(textFieldFrom.getPreferredSize());       
-		JLabel labelForTo = new JLabel("до:"); 
+		JLabel labelForTo = new JLabel("РґРѕ:"); 
 		textFieldTo = new JTextField("1.0", 10); 
 		textFieldTo.setMaximumSize(textFieldTo.getPreferredSize()); 
-		JLabel labelForStep = new JLabel("с шагом:"); 
+		JLabel labelForStep = new JLabel("СЃ С€Р°РіРѕРј:"); 
 		textFieldStep = new JTextField("0.1", 10); 
 		textFieldStep.setMaximumSize(textFieldStep.getPreferredSize()); 
 		
@@ -239,7 +239,7 @@ public class MainFrame extends JFrame{
 		getContentPane().add(hboxRange, BorderLayout.NORTH);    
 		
 	 
-		JButton buttonCalc = new JButton("Вычислить"); 
+		JButton buttonCalc = new JButton("Р’С‹С‡РёСЃР»РёС‚СЊ"); 
 	
 		buttonCalc.addActionListener(new ActionListener() 
 		{ 
@@ -272,14 +272,14 @@ public class MainFrame extends JFrame{
 					} catch (NumberFormatException ex) { 
 						 
 						JOptionPane.showMessageDialog(MainFrame.this, 
-								"Ошибка в формате записи числа с плавающей точкой", "Ошибочный формат числа", 
+								"РћС€РёР±РєР° РІ С„РѕСЂРјР°С‚Рµ Р·Р°РїРёСЃРё С‡РёСЃР»Р° СЃ РїР»Р°РІР°СЋС‰РµР№ С‚РѕС‡РєРѕР№", "РћС€РёР±РѕС‡РЅС‹Р№ С„РѕСЂРјР°С‚ С‡РёСЃР»Р°", 
 								JOptionPane.WARNING_MESSAGE); 
 						} 
 				} 
 			}); 
 		
 			   
-			JButton buttonReset = new JButton("Очистить поля"); 
+			JButton buttonReset = new JButton("РћС‡РёСЃС‚РёС‚СЊ РїРѕР»СЏ"); 
 		
 			buttonReset.addActionListener(new ActionListener()
 			{ 
@@ -352,8 +352,8 @@ public class MainFrame extends JFrame{
 				
 				PrintStream out = new PrintStream(selectedFile);  			
 	
-				out.println("Результаты табулирования многочлена по схеме Горнера"); 
-				out.print("Многочлен: "); 
+				out.println("Р РµР·СѓР»СЊС‚Р°С‚С‹ С‚Р°Р±СѓР»РёСЂРѕРІР°РЅРёСЏ РјРЅРѕРіРѕС‡Р»РµРЅР° РїРѕ СЃС…РµРјРµ Р“РѕСЂРЅРµСЂР°"); 
+				out.print("РњРЅРѕРіРѕС‡Р»РµРЅ: "); 
 				for (int i=0; i<coefficients.length; i++) 
 				{ 
 					out.print(coefficients[i] + "*X^" + 
@@ -362,14 +362,14 @@ public class MainFrame extends JFrame{
 						out.print(" + "); 
 				} 
 				out.println(""); 
-				out.println("Интервал от " + data.getFrom() + " до " + 
-						data.getTo() + " с шагом " + data.getStep()); 
+				out.println("РРЅС‚РµСЂРІР°Р» РѕС‚" + data.getFrom() + " РґРѕ " + 
+						data.getTo() + " СЃ С€Р°РіРѕРј" + data.getStep()); 
 				out.println("===================================================="); 
 				
 				for (int i = 0; i<data.getRowCount(); i++)
 				{ 
-					out.println("Значение в точке " + formatter.format(data.getValueAt(i,0)) 
-							+ " равно " + formatter.format(data.getValueAt(i,1))); 
+					out.println("Р—РЅР°С‡РµРЅРёРµ РІ С‚РѕС‡РєРµ " + formatter.format(data.getValueAt(i,0)) 
+							+ " СЂР°РІРЅРѕ " + formatter.format(data.getValueAt(i,1))); 
 				} 
 				
 				out.close();     
@@ -387,7 +387,7 @@ public class MainFrame extends JFrame{
 			
 			if (args.length==0) 
 			{ 
-				System.out.println("Невозможно табулировать многочлен, для которого не задано ни одного коэффициента!"); 
+				System.out.println("РќРµРІРѕР·РјРѕР¶РЅРѕ С‚Р°Р±СѓР»РёСЂРѕРІР°С‚СЊ РјРЅРѕРіРѕС‡Р»РµРЅ, РґР»СЏ РєРѕС‚РѕСЂРѕРіРѕ РЅРµ Р·Р°РґР°РЅРѕ РЅРё РѕРґРЅРѕРіРѕ РєРѕСЌС„С„РёС†РёРµРЅС‚Р°!"); 
 				System.exit(-1); 
 			} 
 			
@@ -401,8 +401,8 @@ public class MainFrame extends JFrame{
 			} 
 			catch (NumberFormatException ex) { 
 				
-				System.out.println("Ошибка преобразования строки '" + 
-						args[i] + "' в число типа Double"); 
+				System.out.println("РћС€РёР±РєР° РїСЂРµРѕР±СЂР°Р·РѕРІР°РЅРёСЏ СЃС‚СЂРѕРєРё ' '" + 
+						args[i] + "' РІ С‡РёСЃР»Рѕ С‚РёРїР° Double"); 
 				System.exit(-2); 
 			} 
 			 

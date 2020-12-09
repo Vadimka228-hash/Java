@@ -76,13 +76,13 @@ public class GornerTableModel extends AbstractTableModel{
 		  
 		  switch (col){
 		  case 0:
-			  return "Значение X";
+			  return "Р—РЅР°С‡РµРЅРёРµ X";
 			  case 1:
-				  return "Значение многочлена";
+				  return "Р—РЅР°С‡РµРЅРёРµ РјРЅРѕРіРѕС‡Р»РµРЅР°";
 				  case 2:
-					  return "Наоборот";
+					  return "РќР°РѕР±РѕСЂРѕС‚";
 					  default:
-						  return "Разница";
+						  return "Р Р°Р·РЅРёС†Р°";
 						  }
 		  }	
 	  }

@@ -6,7 +6,7 @@ public class Coffee extends Food {
 	private Double calories = null;
 
 	public Coffee(String aroma) {
-		super("Кофе");
+		super("РљРѕС„Рµ");
 		this.setAroma(aroma);
 	}
 	
@@ -25,23 +25,29 @@ public class Coffee extends Food {
 	
 	public void consume()
     {                    
-        System.out.println( this + " выпит");
+        System.out.println( this + " РІС‹РїРёС‚");
     }
 	
 	
 	public Double calculateCalories() {
-		if(this.aroma.equals("Горький"))
+		if(this.aroma.equals("Р“РѕСЂСЊРєРёР№"))
 		{
 			calories = 40.0;
 			return calories;
 			}
 		else
-			if(this.aroma.equals("Восточный"))
+			if(this.aroma.equals("РќР°СЃС‹С‰РµРЅРЅС‹Р№"))
 			{
 			calories = 40.0;
 			return calories;
 			}
 			else
+				if(this.aroma.equals("Р’РѕСЃС‚РѕС‡РЅС‹Р№"))
+				{
+				calories = 40.0;
+				return calories;
+				}
+				else
 				return 0.0;	
 	}
 }

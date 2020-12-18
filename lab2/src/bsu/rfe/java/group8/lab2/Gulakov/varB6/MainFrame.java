@@ -22,7 +22,7 @@ public class MainFrame extends JFrame {
 
 
 private static final int WIDTH = 600; 
-private static final int HEIGHT = 420; 
+private static final int HEIGHT = 520; 
 
 
 private JTextField textFieldX; 
@@ -31,7 +31,7 @@ private JTextField textFieldZ;
 
 
 
-  
+  s
 private JTextField memoryTextField;
 private JTextField resultFieldText;
 
@@ -60,21 +60,21 @@ private Double mem3 = new Double(0);
 	public Double calculate1(Double x, Double y, Double z) {
 		if (x == 0)	{
 			JOptionPane.showMessageDialog(MainFrame.this, 
-					"x не может равняться нулю", "" +
+					"X не может равняться нулю", "" +
 							"Ошибка ввода", JOptionPane.WARNING_MESSAGE);
 			return 0.0;
 		}
 		
 		if (y == 0)	{
 			JOptionPane.showMessageDialog(MainFrame.this, 
-					"y не может равняться нулю", "" +
+					"Y не может равняться нулю", "" +
 							"Ошибка ввода", JOptionPane.WARNING_MESSAGE);
 			return 0.0;
 		}
 		
 		if (z == 0)	{
 			JOptionPane.showMessageDialog(MainFrame.this, 
-					"z не может равняться нулю", "" +
+					"Z не может равняться нулю", "" +
 							"Ошибка ввода", JOptionPane.WARNING_MESSAGE);
 			return 0.0;
 		}
@@ -140,7 +140,7 @@ private Double mem3 = new Double(0);
 
 	
 	public MainFrame() { 
-	super("Вычисление формулы"); 
+	super("Вычисление формулы: "); 
 	setSize(WIDTH, HEIGHT); 
 	Toolkit kit = Toolkit.getDefaultToolkit(); 
 	
@@ -211,7 +211,7 @@ private Double mem3 = new Double(0);
 
 
 	
-	JLabel labelForResult = new JLabel("Результат:"); 
+	JLabel labelForResult = new JLabel("Результат: "); 
 	
 	resultFieldText = new JTextField("0", 15); 
 	
